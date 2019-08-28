@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>One Word Reader</title>
+  </head>
+  <body>
+    <div class="appContainer">
+      <div id="inputContainer">
+        <textarea
+          wrap="soft"
+          type="text"
+          id="textInput"
+          name="textContent"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <div id="controlPanel">
+          <h5>Scroll speed in milliseconds</h5>
+          <input placeholder="500" id="msSpeed" type="number" />
+          <button class="button" id="runButton">Run</button>
+          <button class="button" id="stopButton">Stop</button>
+          <div class="skba">
+            <button class="button" id="back">back</button>
+            <button class="button" id="skip">skip</button>
+          </div>
+          <button class="button" id="restart">Restart</button>
+        </div>
+      </div>
+      <div id="outputContainer">
+        <h2 id="outputText">Sample</h2>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="reader.js"></script>
+  </body>
+</html>
