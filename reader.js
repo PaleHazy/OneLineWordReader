@@ -26,7 +26,7 @@ function getInput() {
   return textData;
 }
 function splitter() {
-  splitWords = getInput().split(/\s|\n|\t|\r/);
+  splitWords = getInput().split(/\s|\n|\t|\r|\[\w\]/);
 }
 
 // ------------------------------------------------------------------------- //
