@@ -19,6 +19,7 @@ $('#restart').on('click', () => {
 $('textarea').on('input', () => {
   splitter();
   console.log(splitWords);
+  appender(splitWords.length + ' WORDS');
 });
 
 function getInput() {

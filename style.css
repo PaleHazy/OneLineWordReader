@@ -65,6 +65,11 @@ body {
   align-items: center;
 }
 
+#outputText {
+  font-size: 46px;
+  font-family: 'Roboto', sans-serif;
+}
+
 .button {
   -webkit-appearance: none;
   -moz-appearance: none;
