@@ -13,7 +13,7 @@ function getInput() {
 }
 //µ¥µ//this function will split the contents of get input and save it to the global variable ∂√splitWords√
 function splitter() {
-  splitWords = getInput().split(/\s|\n|\t|\r|\[\w\]/);
+  splitWords = getInput().split(/\s|\n|\t|\r|\[\w\]|^\s*$/);
 }
 //µ¥µ// ∂√function appender()√
 function appender(x) {
