@@ -30,11 +30,14 @@ function current() {
 //µ¥µ// ∂√function mix()√
 function mix() {
   if (counter < splitWords.length) {
+    console.log(interval);
+
     highlightWord();
     appender(current());
     counter++;
   } else {
     clearInterval(interval);
+    interval = undefined;
   }
 }
 //µ¥µ// ∂√function highlightWord()√
@@ -52,7 +55,11 @@ function highlightWord() {
 //µ¥µ// ∂√function runApp()√
 function runAPP() {
   flip = true;
-  interval = setInterval(mix, intervalSpeed);
+  if (interval) {
+    console.log('still runnin');
+  } else {
+    interval = setInterval(mix, intervalSpeed);
+  }
 }
 //µ¥µ// ∂√function followAppender()√
 function followAppender() {
@@ -70,6 +77,7 @@ $('#msSpeed').on('input', () => {
   intervalSpeed = $('#msSpeed').val();
   console.log('intervalSpeed:', intervalSpeed);
 });
+//†_†// eventListener: click on the button named paste. // this doesnt seem to work while being hosted
 
 document.getElementById('paste').addEventListener('click', () => {
   counter = 0;
@@ -87,7 +95,6 @@ $('#restart').on('click', () => {
   appender(splitWords[0]);
   let elemSelector = $('.wordByWord');
   elemSelector.removeClass('selected');
-  flip = false;
 });
 
 $('textarea').on('input', () => {
@@ -101,6 +108,7 @@ $('#runButton').on('click', runAPP);
 $('#stopButton').on('click', () => {
   flip = false;
   clearInterval(interval);
+  interval = undefined;
 });
 
 $('#back').on('click', () => {
@@ -125,6 +133,7 @@ $('body').keydown(function(e) {
     if (e.which == 32) {
       event.preventDefault();
       clearInterval(interval);
+      interval = undefined;
     }
   }
 });
