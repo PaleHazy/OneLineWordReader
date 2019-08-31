@@ -22,7 +22,7 @@
         ></textarea>
         <div id="controlPanel">
           <h5>Scroll speed in milliseconds</h5>
-          <input value="500" id="msSpeed" type="number" />
+          <input value="250" id="msSpeed" type="number" />
           <button class="button" id="runButton">Run</button>
           <button class="button" id="stopButton">Stop</button>
           <div class="skba">
@@ -30,11 +30,13 @@
             <button class="button" id="skip">skip</button>
           </div>
           <button class="button" id="restart">Restart</button>
+          <button class="button" id="paste">Paste</button>
         </div>
       </div>
       <div id="outputContainer">
         <h2 id="outputText">Paste text into the box above</h2>
       </div>
+      <div id="followAlongContainer"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="reader.js"></script>

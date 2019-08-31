@@ -1,13 +1,11 @@
 html,
-body {
-  height: 100%;
-}
+body {}
 
 .appContainer {
   margin: auto;
   display: flex;
-  width: 97%;
-  height: 100%;
+  width: 100%;
+  height: min-content;
   background-color: #5998bd;
   flex-direction: column;
 }
@@ -15,7 +13,7 @@ body {
 #inputContainer {
   height: min-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -24,6 +22,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 #textInput {
@@ -33,16 +33,14 @@ body {
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
-  width: 80%;
+  width: 50%;
   border-radius: 3px;
-  padding: 10px 15px;
-  display: block;
   text-align: start;
   font-size: 11px;
   color: white;
   transition-duration: 0.25s;
   font-weight: 300;
-  height: 400px;
+  height: 200px;
 }
 
 .textInput::placeholder {
@@ -94,4 +92,21 @@ body {
 .skba {
   display: flex;
   justify-content: center;
+}
+
+#followAlongContainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+}
+
+#followAlongContainer>div {
+  font-size: 13px;
+  height: min-content;
+  width: min-content;
+  margin-right: 2px;
+}
+
+.selected {
+  background-color: rgba(213, 222, 40, 0.701);
 }
